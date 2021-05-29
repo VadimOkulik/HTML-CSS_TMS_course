@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            max-width: 1600px;
+        display: grid;
+        grid-gap:0.5em;
+        grid-template:
+            "menu header  header"   1fr
+            "menu submenu  content" 4fr
+            "menu  footer footer"  1fr           
+            / 70px   1fr    2fr   
+            ;
+      }
+      .main > div {
+          padding: 1em;
+          background-color:gray;
+          color:honeydew;
+
+      }
+      .header {
+        grid-area: header;
+      }
+      .menu {
+        grid-area: menu;
+        
+      }
+      .submenu {
+        grid-area: submenu;
+      }
+      .content {
+        grid-area: content;
+      }
+      .footer {
+          grid-area: footer;
+      }
+      @media (max-width: 1024px){
+        .main {
+            
+        display: grid;
+        grid-gap:1%;
+        grid-template:
+            "menu submenu"   1fr
+            "header header" 1fr
+            "content content"  4fr
+            "footer footer"    1fr       
+            / 1fr  2fr  
+            ;
+      }
+      .main > div {
+          padding: 1rem;;
+          background-color:rgb(33, 112, 1);
+          color:honeydew;
+
+      }
+      }
+      @media (max-width: 640px){
+        .main {
+            
+        display: grid;
+        grid-gap:1%;
+        grid-template:
+            "menu"   1fr
+            "submenu" 1fr
+            "header"  1fr
+            "content"  4fr 
+            "footer"   1fr 
+            / 1fr    
+            ;
+      }
+      .main > div {
+          padding: 1rem;;
+          background-color:rgb(255, 7, 7);
+          color:honeydew;
+
+      }
+      }
+    </style>
+    
+</head>
+<body>
+    <div class="main">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="submenu">Sub menu</div>
+        <div class="content">Content</div>
+        <div class="footer">Footer</div>    
+    </div>
+    
+</body>
+</html>

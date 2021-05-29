@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div {
+            
+            width: 170px;
+            height: 170px;
+            line-height: 100px;          
+            transition: all 0.5s ease-in-out;
+        }
+      .page {      
+          background-color:#bd6353;
+          
+      }
+      .title {
+          position: absolute;
+          transform: perspective(700px) rotateY(-40deg);
+          background-color:#b4aeae;
+          transform-origin: left;
+
+     
+          
+      }
+      .title:hover {
+        transform: perspective(700px) rotateY(0);
+        cursor: pointer;
+       
+      }
+      .book {
+          padding-top: 20px;
+      }
+      .page2 {      
+          background-color:#bd6353;
+      }
+      .title2 {
+          position: absolute;
+          transform: perspective(700px) rotateY(-50deg);
+          background-color: #b4aeae;
+          transform-origin: left;
+
+     
+          
+      }
+      .title2:hover {
+        transform: perspective(700px) rotateY(0);
+        cursor: pointer;
+       
+      }
+      .book2 {
+          padding-top: 100px;
+      }
+    </style>
+
+    <div class="book">
+        <div class="title"></div>
+        <div class="page"></div>
+    </div>
+
+    <div class="book2">
+        <div class="title2"></div>
+        <div class="page2"></div>
+    </div>
+</body>
+</html>
